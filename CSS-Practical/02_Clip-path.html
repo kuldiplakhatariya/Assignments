@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path using CSS</title>
+    <style>
+        img {
+            clip-path: inset(100px 50px);
+            /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);   */
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 48% 72%, 48% 72%, 0% 50%);
+
+        }
+
+        div {
+            margin: auto;
+            width: 80%;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d">
+        <img src="Assignment--images/clip-path-image.avif" alt="">
+    </div>
+</body>
+
+</html>
