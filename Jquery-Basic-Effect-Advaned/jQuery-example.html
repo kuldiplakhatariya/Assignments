@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 20px;
+            border: 1px solid black;
+        }
+        .inner {
+            padding: 20px;
+            border: 1px solid red;
+        }
+        .button {
+            padding: 10px;
+            border: 1px solid blue;
+            background-color: lightgrey;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <button class="button">Click here..</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.container').on('click', function() {
+                console.log('Container clicked');
+            });
+            $('.container').on('click', function() {
+                console.log('Container clicked');
+            });
+            $('.inner').on('click', function() {
+                console.log('Inner div clicked');
+            });
+
+            $('.button').on('click', function() {
+                console.log('Button clicked');
+            });
+        });
+    </script>
+</body>
+</html>
