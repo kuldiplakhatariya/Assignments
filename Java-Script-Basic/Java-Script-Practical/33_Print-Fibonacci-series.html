@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Program to display the fibonacci series...</h3>
+    
+    <script>
+      function printFibonacci(n) {
+    let fibSeries = [0, 1];
+    for (let i = 2; i < n; i++) {
+        fibSeries[i] = fibSeries[i - 1] + fibSeries[i - 2];
+    }
+    document.write(fibSeries.join(', '));
+}
+
+// Example usage: Print the first 10 terms of the Fibonacci series
+printFibonacci(10);
+     </script>
+ 
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function areObjectsEqual(obj1, obj2) {
+    // Check if both arguments are objects
+    if (typeof obj1 !== 'object' || obj1 === null || typeof obj2 !== 'object' || obj2 === null) {
+        return false;
+    }
+
+    // Check if both objects have the same number of keys
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+    if (keys1.length !== keys2.length) {
+        return false;
+    }
+
+    // Check if all keys and values are the same
+    for (const key of keys1) {
+        if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key])) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function deepEqual(value1, value2) {
+    if (value1 === value2) {
+        return true;
+    }
+
+    if (typeof value1 !== 'object' || value1 === null || typeof value2 !== 'object' || value2 === null) {
+        return false;
+    }
+
+    return areObjectsEqual(value1, value2);
+}
+
+// Example usage:
+const object1 = { a: 1, b: { c: 3 } };
+const object2 = { a: 1, b: { c: 3 } };
+const object3 = { a: 1, b: { c: 4 } };
+
+console.log(areObjectsEqual(object1, object2)); // true
+console.log(areObjectsEqual(object1, object3)); // false
+
+    </script>
+</body>
+</html>

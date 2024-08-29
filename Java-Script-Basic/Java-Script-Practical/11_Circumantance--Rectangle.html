@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3>Program to find the circumantance of the rectangle.</h3> <br>
+    <label for="">Enter the value to find circumantance of rectangle</label><input type="text" name="" id="txt" placeholder="Enter the value"> <br>
+    <button onclick="calculate()">Calculate</button> <br>
+    <label for="">Circumantace of the rectngle is-></label><label for="" id="result"></label>
+    <script>
+        function calculate(){
+            var val = document.getElementById("txt").value
+            var c=4*val
+            document.getElementById("result").innerHTML=c
+        }
+    </script>
+</body>
+</html>

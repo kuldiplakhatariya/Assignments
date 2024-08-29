@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Check to given number is Odd , Even or Zero</h3>
+    <input type="" name="" id="no"> <span id="noerr"></span>
+    <nav id="result"></nav>
+    <button onclick="check();check1()">Check</button>
+    <script>
+        function check(){
+            var no1 = document.getElementById("no").value
+           
+            if(no1>0)
+            {
+                document.getElementById("result").innerHTML="No is positive..."
+                // document.write("Given number is positive..")
+            }
+            else if(no1<0)
+            {
+                 document.getElementById("result").innerHTML="No is Negative..."
+            }
+            else
+            {
+                 document.getElementById("result").innerHTML="No is Zero..."
+            }
+           
+        }
+        function check1(){
+            var noer =document.getElementById("noerr")
+            if(noer.value=='' || noer.value==null){
+            noerr.innerHTML="Please enter only Number..."
+            noerr.style.color = "red"
+            return false
+           }
+           else
+            {
+                noerr.innerHTML=""
+            }
+        }
+    </script>
+</body>
+</html>

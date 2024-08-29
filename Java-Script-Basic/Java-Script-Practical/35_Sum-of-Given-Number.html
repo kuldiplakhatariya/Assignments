@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumOfDigits(number) {
+     // Convert the number to a string
+     let numberString = number.toString();
+     
+     // Split the string into an array of characters (digits)
+     let digitsArray = numberString.split('');
+     
+     // Convert each character back to a number and sum them up
+     let sum = digitsArray.reduce((accumulator, currentDigit) => {
+         return accumulator + parseInt(currentDigit);
+     }, 0);
+     
+     return sum;
+ }
+ 
+ // Example usage
+ let number = 1523;
+ document.write("Summation of digits of " + number + " is: " + sumOfDigits(number)); // Output: 11
+ 
+     </script>
+ 
+</body>
+</html>

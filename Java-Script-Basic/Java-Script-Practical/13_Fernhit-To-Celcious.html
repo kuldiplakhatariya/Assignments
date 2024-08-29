@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         //   To check the out put see in Console lof file
+           // ...................................................
+
+           
+        function convertFahrenheitToCelsius(fahrenheit) {
+       // Check if the input is a valid number
+       if (typeof fahrenheit !== 'number') {
+           return "Invalid input: Temperature must be a number.";
+       }
+   
+       // Convert Fahrenheit to Celsius
+       let celsius = (5 / 9) * (fahrenheit - 32);
+   
+       // Return the result
+       return celsius;
+   }
+   
+          // Example usage
+   let fahrenheitTemperature = 100;
+   let celsiusTemperature = convertFahrenheitToCelsius(fahrenheitTemperature);
+   console.log(fahrenheitTemperature + "°F is " + celsiusTemperature.toFixed(2) + "°C.");
+   
+   // Example with invalid input
+   let invalidInput = "Hello";
+   let invalidResult = convertFahrenheitToCelsius(invalidInput);
+   console.log(invalidResult); // Should print an error message
+       </script>
+   
+</body>
+</html>

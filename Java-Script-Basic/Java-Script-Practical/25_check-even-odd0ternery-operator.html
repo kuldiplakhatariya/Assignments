@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Check the given no is Odd or Even using turnery operator...</h3> <br>
+    <input type="text" name="" id="no1">    <span id="numerr"></span> <br>
+    <label for="" id="result"></label> <br>
+     <button onclick="chkno();chkno1()">Check Number</button>
+    <script>
+    
+        function chkno(){
+            var no=document.getElementById("no1")
+            var er=document.getElementById("numerr")
+            if(no.value=='' || no.value==null){
+                er.innerHTML="Please enter the number.."
+                er.style.color = "red...!"
+                return false
+            }
+            else 
+            {
+                er.innerHTML=""
+            }
+        }
+        function chkno1(){
+            var no2=document.getElementById("no1").value
+           return (no2%2==0 &&no2!="")?document.getElementById("result").innerHTML="Number is Even.." : document.getElementById("result").innerHTML="Number is odd..."
+        }
+        
+    </script>
+</body>
+</html>

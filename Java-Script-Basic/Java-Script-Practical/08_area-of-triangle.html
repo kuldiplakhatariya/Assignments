@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Programe to find the area of triangle...</h3>
+    <label for="" >Enter the value of Base</label>  <input type="text" name="" id="base1"> <br>
+    <label for="">Enter value of Area</label>      <input type="text" name="" id="area1">
+
+    <button onclick="triangle()">Calculate</button> <br> <br>
+    <label for="">Area of triangle og above numbers is</label> <label for="" id="res"></label> 
+    <script>
+        // Program to find the area of triangle...
+        
+        function triangle(b,a){
+            var b=document.getElementById("base1").value
+            var a=document.getElementById("area1").value
+            var result
+
+            if(b>0 && a>0){
+                result = 0.5 * parseFloat(a) * parseFloat(b)
+                console.log(result)
+                document.getElementById("res").innerHTML=result
+            }
+            else
+            {
+                return "Please enter the positive number to calculate the triangle.."
+            }
+        }
+    </script>
+    
+</body>
+</html>

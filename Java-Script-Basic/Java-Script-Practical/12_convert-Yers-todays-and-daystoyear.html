@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .output{
+            color: blue;
+            font-size: 20px;
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+    <h3>Program to convert Years to days and days to Years</h3> <br>
+    <label for="">Enter the number of days to calculate years</label> <input type="text" id="day"> <br>
+    <label for="">Enter the Number of years to calculate days</label> <input type="text" id="yrs"> <br>
+    <button onclick="daystoyear()">Calculate Years</button> 
+    <button>Calculate days</button><br>
+
+     <label for="">Total number of years is : </label>  <label for="" id="display" class="output"></label>
+     <label for="">And total months is :</label>        <label for="" id="month" class="output"></label>
+     <label for="">And  week is:</label>           <label for="" id="wk" class="output">
+     </label><label for="">And  days is</label>    <label for="" id="tdays" class="output"></label>
+
+
+     <script>
+        function daystoyear(){
+             var day=document.getElementById("day").value
+             
+            let year=day/365
+            let year1=Math.round(year);
+
+            let month=(day%365)/30
+             let month1=Math.round(month)
+
+            let week =((day%365)%30)/7
+            let week1=Math.round(week)
+
+            day=((day%365)%30)%7
+            let dy1=Math.round(day)
+
+           document.getElementById("display").innerHTML=year1
+           document.getElementById("month").innerHTML=month1
+           document.getElementById("wk").innerHTML=week1
+           document.getAnimations("tdays").innerHTML=dy1
+
+            }
+           
+     </script>
+</body>
+</html>

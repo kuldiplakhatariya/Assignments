@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkVowelOrConsonant(character) {
+     // Ensure the input is a single character string
+     if (typeof character !== 'string' || character.length !== 1) {
+         return "Invalid input: Please provide a single character.";
+     }
+ 
+     // Convert the character to lowercase to make the check case-insensitive
+     let lowerCaseChar = character.toLowerCase();
+ 
+     let result;
+     switch (lowerCaseChar) {
+         case 'a':
+         case 'e':
+         case 'i':
+         case 'o':
+         case 'u':
+             result = "Vowel";
+             break;
+         default:
+             result = "Consonant";
+     }
+ 
+     return result;
+ }
+ 
+ // Example usage
+ console.log(checkVowelOrConsonant('A')); // Output: Vowel
+ console.log(checkVowelOrConsonant('b')); // Output: Consonant
+ console.log(checkVowelOrConsonant('E')); // Output: Vowel
+ console.log(checkVowelOrConsonant('z')); // Output: Consonant
+ console.log(checkVowelOrConsonant('1')); // Output: Consonant (1 is not a vowel, but we consider all non-vowel inputs as consonants)
+ console.log(checkVowelOrConsonant(''));  // Output: Invalid input: Please provide a single character.
+ console.log(checkVowelOrConsonant('abc'));  // Output: Invalid input: Please provide a single character.
+ 
+     </script>
+ 
+</body>
+</html>

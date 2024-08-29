@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //   To check the out put see in Console lof file
+           // ...................................................
+
+           
+        function getFileExtension(filename) {
+       // Check if the input is a valid string
+       if (typeof filename !== 'string') {
+           return "Invalid input: Filename must be a string.";
+       }
+   
+       // Find the last period in the filename
+       let lastDotPosition = filename.lastIndexOf('.');
+   
+       // If there is no period or it's the first character, return an error message
+       if (lastDotPosition === -1 || lastDotPosition === 0) {
+           return "Invalid filename: No extension found.";
+       }
+   
+       // Extract the extension from the last period to the end of the string
+       let extension = filename.slice(lastDotPosition + 1);
+   
+       // Return the extension
+       return extension;
+   }
+   
+   // Example usage
+   let filename1 = "example.txt";
+   let extension1 = getFileExtension(filename1);
+   console.log("The extension of the file '" + filename1 + "' is: " + extension1);
+   
+   let filename2 = "archive.pdf";
+   let extension2 = getFileExtension(filename2);
+   console.log("The extension of the file '" + filename2 + "' is: " + extension2);
+   
+   let filename3 = "no_extension";
+   let extension3 = getFileExtension(filename3);
+   console.log(extension3); // Should print an error message
+   
+   let filename4 = ".hiddenfile";
+   let extension4 = getFileExtension(filename4);
+   console.log(extension4); // Should print an error message
+   
+   let invalidInput = 12345;
+   let invalidResult = getFileExtension(invalidInput);
+   console.log(invalidResult); // Should print an error message
+   
+       </script>
+   
+</body>
+</html>

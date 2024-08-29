@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumOfFirstAndLastDigit(number) {
+     // Convert the number to a string
+     let numberString = number.toString();
+     
+     // Get the first digit (character) and convert it to a number
+     let firstDigit = parseInt(numberString[0]);
+     
+     // Get the last digit (character) and convert it to a number
+     let lastDigit = parseInt(numberString[numberString.length - 1]);
+     
+     // Sum the first and last digits
+     let sum = firstDigit + lastDigit;
+     
+     return sum;
+ }
+ 
+ // Example usage
+ let number = 1234;
+ document.write("Summation of the first and last digits of " + number + " is: " + sumOfFirstAndLastDigit(number)); 
+ 
+ number = 9876;
+ document.write("Summation of the first and last digits of " + number + " is: " + sumOfFirstAndLastDigit(number));
+ 
+     </script>
+ 
+</body>
+</html>

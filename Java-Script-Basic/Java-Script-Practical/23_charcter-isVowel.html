@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter any character</label> 
+    <input type="text" id="name1" ><br>
+    <label for="" id="display"></label>
+    <button onclick="check1()">Check character</button>
+    <script>
+        function check1(){
+            var inp = document.getElementById("name1").value
+            console.log(inp.value)
+            if(inp == "")
+            {
+                alert("Pls.enter only one character")
+            }
+            else if(inp =='a' || inp=='e' || inp =='i' || inp=="o" || inp=="u" )
+            {
+               document.getElementById("display").innerHTML= "Given number is Vowel"
+           } 
+           else if(inp=='A' || inp=='E' || inp =='I' || inp=="O" || inp=="U" )
+           {
+            document.getElementById("display").innerHTML= "Given Character is Vowel"
+           }
+           else{
+            document.getElementById("display").innerHTML = "Give character is Not vowel number"
+           }
+        }
+
+       </script>
+   
+</body>
+</html>

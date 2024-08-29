@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .chk{
+            display: block;
+        } */
+    </style>
+</head>
+<body>
+    <div class="chk">
+    <label for="">Enter the First No</label><input type="text"  id="n1"><span id="no1"></span> <br>
+    <label for="">Enter the Second No</label><input type="text" id="n2"><span id="no2"></span> <br>
+    <label for="">Enter the Third No</label><input type="text"  id="n3"><span id="no3"></span> <br>
+    <label for="" id="display"></label>
+    <button onclick="checkno()">Check Max No.</button>
+   </div>
+   <script>
+    function checkno(){
+
+    var num1=document.getElementById("n1")
+    var num1err=document.getElementById("no1")
+    
+    var num2=document.getElementById("n2")
+    var num2err=document.getElementById("no2")
+
+    var num3=document.getElementById("n3")
+    var num3err=document.getElementById("no3")
+
+    if(num1.value=='' || num1.value ==null){
+        num1err.innerHTML="Please enter any number"
+        num1err.style.color="red"
+        return false
+    }
+    else{
+            num1err.innerHTML=""
+    }
+    if(num2.value=='' || num2.value ==null){
+          num2err.innerHTML="Please enter the number only.."
+          num2err.style.color="red"
+          return false
+    }
+    else{
+          num2err.innerHTML=""
+    }
+    if(num3.value=='' || num3.value ==null){
+          num3err.innerHTML="Please enter the number only.."
+          num3err.style.color="red"
+          return false
+    }
+    else{
+      
+        num3err.innerHTML=""
+    }
+     var max =  (num1 > num2) ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
+    document.write("MAximum Number is",max)
+}
+   </script>
+</body>
+</html>

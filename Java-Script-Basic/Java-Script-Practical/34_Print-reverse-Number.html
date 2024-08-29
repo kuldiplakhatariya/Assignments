@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseNumber(number) {
+     // Convert the number to a string
+     let numberString = number.toString();
+     
+     // Split the string into an array of characters
+     let numberArray = numberString.split('');
+     
+     // Reverse the array of characters
+     let reversedArray = numberArray.reverse();
+     
+     // Join the characters back into a string
+     let reversedString = reversedArray.join('');
+     
+     // Convert the reversed string back to a number
+     let reversedNumber = parseInt(reversedString);
+     
+     return reversedNumber;
+ }
+ 
+ // Example usage
+ let number = 64728;
+      document.write("Reverse of " + number + " is: " + reverseNumber(number)); // Output: 82746
+ 
+     </script>
+ 
+</body>
+</html>

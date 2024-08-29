@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>To print factorial number of given number in java script...</h3>
+    <input type="text" name="" id="no1"> <label for="" id="display"></label> <br>
+    <button onclick="fact()">Check factorial no.</button>
+    <script>
+        var no=document.getElementById("no1")
+        var dis=document.getElementById("display")
+        var result=1,i
+        function fact(){
+            for(i=1;i<=no.value;i++){
+            result=result*i
+        }
+           dis.innerHTML="Factorial Number is : "+result
+        }
+    </script>
+</body>
+</html>

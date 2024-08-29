@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function displayFunDayNameWithTime() {
+    const funDayNames = [
+        "Sunday ", 
+        " Monday", 
+        " Tuesday", 
+        " Wednesday", 
+        " Thursday", 
+        " Friday", 
+        " Saturday"
+    ];
+
+    const now = new Date();
+    const dayIndex = now.getDay();
+    const funDayName = funDayNames[dayIndex];
+
+    let hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const milliseconds = now.getMilliseconds();
+
+    const period = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12; // Convert to 12-hour format and handle midnight (0 should be 12)
+
+    const formattedTime = `${hours} ${period} : ${minutes.toString().padStart(2, '0')} : ${seconds.toString().padStart(2, '0')} : ${milliseconds}`;
+
+    console.log(`Today is ${funDayName}. ${formattedTime}`);
+    //console.log(`Current Time is ${formattedTime}.`);
+}
+
+displayFunDayNameWithTime();
+
+
+
+</script>
+
+</body>
+</html>
