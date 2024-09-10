@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            display: grid;
+            grid-template-columns: auto auto auto ;  
+        }
+        .two{
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .one1{
+            display: grid;
+            grid-template-columns: repeat(3);
+        }
+        .t1{
+            border: 2px solid black;
+            padding: 10px;
+        }
+        #t11{
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        #t12{
+            grid-row: 1/2;
+            grid-column: 3/4;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two" id="three1"> 
+        <div class="one1">       
+            <div class="t1" id="t11">img 1</div>
+            <div class="t1" id="t12">img 2</div>
+            <div class="t1" id="t13">img 3</div>
+            <div class="t1" id="t14">img 4</div>
+            <div class="t1" id="t15">img 5</div>
+            <div class="t1" id="t16">img 6</div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
